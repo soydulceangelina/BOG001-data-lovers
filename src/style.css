@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700&display=swap');
+
+:root {
+    --background-color: #F2EFE7;
+    --biggest-bar-color: #ff8748;
+    --big-bar-color: #FE9C59;
+    --highlighter-color: #5DB9FF;
+    --card-color: #F2CF6E;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: var(--background-color);  
+}
