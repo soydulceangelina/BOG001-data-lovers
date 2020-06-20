@@ -1,6 +1,23 @@
 import { example } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+const dataPokemon = data.pokemon;
+const root = document.getElementById("root");
 
-console.log(example, data);
+const printCharacters = () => {
+    const view = dataPokemon.map(character => `
+        <article class="pokemon-item">
+            <a href="#/${character.id}/" class="card-container">
+                <img src="${character.img}" alt="${character.name}"
+                <h2>${character.name}</h2>
+            </a>
+            <details class="details-container">
+                <summary>Detalles</summary>
+                <h2>${character.type}</h2>
+            </details>
+        </article>`
+    ).join('');
+
+    root.innerHTML = view;
+ }
+
+window.addEventListener("load", printCharacters);

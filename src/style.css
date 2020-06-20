@@ -74,6 +74,27 @@ header{
   width: 300px;
   font-size: 18px;
   outline: none;
-  padding-left: 80px;
-  
+  padding-left: 80px;  
 }
+
+.main-pokemon-container{
+  padding: 50px 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokemon-item{
+  margin: 20px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.details-container{
+  background-color: var(--card-color);
+}
+
