@@ -7,14 +7,34 @@
   </head>
   <body>
     <header>
-      <img class = "icono" src = "assets/logoheader.png" alt = "Icono">
-      <ul class = "menu">
-      <li>Pokemones</li>
-      <li>Ordenar del mas fuerte al mas debil</li>
-      <li>Ordenar por elemento</li>
-      </ul>
+      <section class="header-main">
+        <div class="header-logo-container">
+          <img class="header-logo" src = "assets/logoheader.png" alt = "PokeFan">
+        </div>
+        <ul class="header-menu-container">
+          <li class="menu-item">Curiosidades</li>
+          <li class="menu-item">About</li>
+        </ul>
+      </section>
+      <nav class="filter-bar">    
+        <select class="filter-input">
+          <option>orden alfabético</option>
+          <option>de la A-Z</option>
+          <option>de la Z-A</option>
+        </select>
+        <select class="filter-input">
+          <option>orden por tipo</option>
+          <option>de la A-Z</option>
+          <option>de la Z-A</option>
+        </select>
+        <select class="filter-input">
+          <option>orden por poder</option>
+          <option>de la A-Z</option>
+          <option>de la Z-A</option>
+        </select>
+      </nav>
     </header>
-    <div id="root">Hola Mundo </div>
+    <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
