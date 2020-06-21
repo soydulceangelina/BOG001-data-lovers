@@ -81,12 +81,16 @@ header{
   padding: 50px 200px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .pokemon-item{
+  height: 200px;
+  width: 150px;
   margin: 20px 50px;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .card-container{
