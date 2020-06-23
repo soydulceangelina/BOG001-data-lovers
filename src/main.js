@@ -11,11 +11,10 @@ const printCharacters = () => {
                 <h2>${character.name}</h2>
             </a>
             <details class="details-container">
-                <summary>Detalles</summary>
+                <summary class="details-items">Detalles</summary>
                 <h2>${character.type}</h2>
                 <h2>${character.height}</h2>
                 <h2>${character.weight}</h2>
-                <h2>${character.candy_count}</h2>
             </details>
         </article>`
     ).join('');
