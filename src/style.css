@@ -4,7 +4,7 @@
     --background-color: #F2EFE7;
     --biggest-bar-color: #ff8748;
     --big-bar-color: #FE9C59;
-    --highlighter-color: #5DB9FF;
+    --highlighter-color: #b8e0ff;
     --card-color: #fbfbf9;
     --font-color: #202329;
 
@@ -52,15 +52,17 @@ header{
 }
 
 .menu-item{
+  width: 50%;
   list-style: none;
-  padding-right: 50px;
+  margin-right: 50px;
+  padding: 10px;
   font-size: 18px;
 }
 
 .menu-item:hover{
   cursor: pointer;
   font-weight: bold;
-  /* background-color: var(--highlighter-color); */
+  background-color: var(--highlighter-color);
 }
 
 .filter-bar{
@@ -84,7 +86,7 @@ header{
 }
 
 .main-pokemon-container{
-  padding: 50px 200px;
+  margin: 50px 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -93,9 +95,9 @@ header{
 
 .pokemon-item{
   background-color: var(--card-color);
-  height: 250px;
+  height: 200px;
   width: 200px;
-  margin: 50px 50px;
+  margin: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,8 +109,13 @@ header{
   transform-origin: center;
 }
 
+.main-pokemon-container:hover .pokemon-item{
+  opacity: 0.5;
+}
+
 .main-pokemon-container:hover .pokemon-item:hover{
   transform: scale(1.3);
+  opacity: 1;
 }
 
 .card-container{
@@ -126,16 +133,27 @@ header{
 
 .details-container{
   width: 220px;
-  margin-top: 25px;
+  padding: 20px 0;
+  /* margin-top: 25px; */
   background-color: var(--card-color);
+  z-index: 1000;
 }
 
 .details-container h2{
-  font-size: 18px;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .details-items{
   outline: none;
+}
+
+summary{
+  margin-bottom: 10px;
+}
+
+summary::-webkit-details-marker {
+  color: var(--biggest-bar-color);
 }
 
 footer{
