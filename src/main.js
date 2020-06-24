@@ -1,4 +1,4 @@
-import { example } from './data.js';
+// import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
 const dataPokemon = data.pokemon;
 const root = document.getElementById("root");
@@ -12,10 +12,10 @@ const printCharacters = () => {
             </a>
             <details class="details-container">
                 <summary class="details-items">Detalles</summary>
-                <h2>Tipo: ${character.type}</h2>
-                <h2>Altura: ${character.height}</h2>
-                <h2>Peso: ${character.weight}</h2>
-                <h2>Para evolucionar: ${character.candy_count} caramelos</h2>
+                <h2>TP: ${character.type}</h2>
+                <h2>AT: ${character.height}</h2>
+                <h2>PS: ${character.weight}</h2>
+                <h2>CC: ${character.candy_count} caramelos</h2>
             </details>
         </article>`
     ).join('');
