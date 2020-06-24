@@ -115,7 +115,7 @@ main{
 
 .pokemon-item{
   background-color: var(--card-color);
-  height: 200px;
+  height: 250px;
   width: 200px;
   margin: 40px;
   display: flex;
@@ -123,14 +123,14 @@ main{
   align-items: center;
   text-align: center;
   padding: 10px;
-  box-shadow: 10px 40px 9px -2px rgba(27,27,38,0.4);
+  box-shadow: 10px 10px 9px -2px rgba(27,27,38,0.4);
   cursor: pointer;
   transition: 450ms all;
   transform-origin: center;
 }
 
 .pokemon-item:hover ~ .pokemon-item{
-  transform: translateY(150px);
+  transform: translateY(100px);
 }
 
 .main-pokemon-container:hover .pokemon-item{
