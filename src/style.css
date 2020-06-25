@@ -23,6 +23,27 @@ body{
   background-color: var(--background-color);
 }
 
+.burger-button{
+  color: var(--font-color);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin-top: 15px;
+  display: none;
+  position: fixed;
+  z-index: 4;
+}
+
+.info-button{
+  color: var(--font-color);
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 15px;
+  z-index: 4;
+}
+
 header{
   width: 100%;
 }
@@ -82,7 +103,7 @@ header{
   width: 20%;
   font-size: 18px;
   outline: none;
-  padding-left: 5%;  
+  padding-left: 1%;  
 }
 
 main{
@@ -91,13 +112,13 @@ main{
 
 .info-bar{
   background-color: var(--big-bar-color);
-  margin-top: 150px;
   height: 100px;
   width: 150px;
   padding: 15px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   right: 0;
   bottom: 0;
   position: fixed;
@@ -110,7 +131,7 @@ main{
 }
 
 .main-pokemon-container{
-  margin: 30px 200px;
+  margin: 30px 10%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -120,7 +141,7 @@ main{
   background-color: var(--card-color);
   height: 250px;
   width: 200px;
-  margin: 40px;
+  margin: 4%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -168,6 +189,7 @@ main{
   font-size: 14px;
   margin-bottom: 5px;
   font-weight: normal;
+  text-align: initial;
 }
 
 .details-items{
@@ -181,6 +203,10 @@ summary{
 
 summary::-webkit-details-marker {
   color: var(--biggest-bar-color);
+}
+
+.icons-details{
+  margin-right: 15px;
 }
 
 footer{

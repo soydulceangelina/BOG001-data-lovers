@@ -1,0 +1,91 @@
+@media screen and (max-width:1023px){
+    .burger-button{
+        display: block;
+    }
+    .header-logo-container{
+        width: 30%;
+    }
+    .filter-bar{
+        padding: 0;
+        flex-direction: column;
+        z-index: 3;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 50vh;
+        position: fixed;
+        background-color: rgba(254, 156, 89,.9);
+        transition: 0.3s;
+    }
+    .filter-input{
+        width: 50%;
+    }
+
+    .filter-bar.is-active{
+        left: 0;
+    }
+    .info-bar{
+        width: 100px;
+    }
+    .icons-details{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:767px){
+    .header-main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-logo-container{
+        width: 40%;
+        padding: 0;
+    }
+
+    .header-menu-container{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .menu-item{
+        text-align: center;
+        margin: 0;
+    }
+
+    .info-bar{
+        display: none;
+    }
+    .info-button{
+        display: block;
+    }
+}
+
+@media screen and (max-width:479px){
+    .header-logo-container{
+        width: 50%;
+        margin-top: 10px;
+    }
+
+    .header-menu-container{
+        margin-top: 10px;
+    }
+
+    .menu-item{
+        font-size: 14px;
+    }
+
+    footer p{
+        font-size: 14px;
+    }
+
+    .filter-input{
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width:319px){
+    
+}

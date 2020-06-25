@@ -3,18 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="assets/font/flaticon.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   </head>
   <body>
+    <span class="flaticon-list burger-button" id="burgerMenu"></span>
     <header>
       <section class="header-main">
         <div class="header-logo-container">
-          <img class="header-logo" src = "assets/logoheader.png" alt = "PokeFan">
+          <img class="header-logo" src="assets/logoheader.png" alt="PokeFan">
         </div>
         <ul class="header-menu-container">
           <li class="menu-item">Curiosidades</li>
-          <li class="menu-item">About</li>
+          <li class="menu-item">Acerca de</li>
         </ul>
       </section>
       <nav class="filter-bar">    
@@ -37,13 +40,13 @@
     </header>
     <main>
       <section class="main-pokemon-container" id="root"></section>
+      <span class="flaticon-info info-button" id="infoMenu"></span>
       <section class="info-bar">
         <ul>
-          <h3>Detalles</h3>
-          <li>Tipo: TP</li>
-          <li>Alto: AT</li>
-          <li>Peso: PS</li>
-          <li>Candy count: CC</li>
+          <li>Tipo: <span class="flaticon-fengshui icons-details"></span></li>
+          <li>Alto: <span class="flaticon-dimension-of-line-height icons-details"></span></li>
+          <li>Peso: <span class="flaticon-dumbbell icons-details"></span></li>
+          <li>Eat: <span class="flaticon-candy icons-details"></span></li>
         </ul>
       </section>
     </main>
