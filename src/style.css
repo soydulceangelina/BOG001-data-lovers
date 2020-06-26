@@ -41,6 +41,7 @@ body{
   right: 0;
   bottom: 0;
   margin-right: 15px;
+  margin-bottom: 25px;
   z-index: 4;
 }
 
@@ -114,7 +115,7 @@ main{
   background-color: var(--big-bar-color);
   height: 100px;
   width: 100px;
-  padding: 15px 10px;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,6 +129,15 @@ main{
 .info-bar ul li{
   list-style: none;
   font-size: 15px;
+  display: flex;
+}
+
+.info-bar ul li h3{
+  font-size: 14px;
+}
+
+.info-bar ul li span::before{
+  font-size: 20px;
 }
 
 .main-pokemon-container{
@@ -181,7 +191,7 @@ main{
 
 .details-container{
   width: 200px;
-  padding: 20px 10px;
+  padding: 0 10px 10px;
   background-color: var(--card-color);
   display: none;
 }
@@ -198,7 +208,9 @@ main{
 }
 
 .details-items{
-  font-size: 18px;
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .icons-details{

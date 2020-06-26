@@ -51,10 +51,18 @@
     }
 
     .info-bar{
-        display: none;
+        height: 120px;
+        display: block;
+        text-align: left;
+        right: -140px;
+        background-color: rgba(254, 156, 89,.9);
+        transition: 0.3s;
     }
     .info-button{
         display: block;
+    }
+    .info-bar.is-active{
+        right: 0;
     }
 }
 

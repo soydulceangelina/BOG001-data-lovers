@@ -26,7 +26,7 @@ const printCharacters = () => {
     }).join('');
 
     root.innerHTML = view;
- }
+ };
 
  function addEventsToCards() {
     let pokeCards = document.querySelectorAll(".pokemon-item");
@@ -67,4 +67,15 @@ burgerButton.addEventListener("click", hideShow);
 
 // ---------------------------------------------------------------------------------------------
 
+let infoIcons = document.querySelector(".info-bar");
+const infoIconsBotton = document.querySelector("#infoMenu");
 
+const hideShowInfoIcons = () => {
+    if(infoIcons.classList.contains("is-active")){
+        infoIcons.classList.remove("is-active");
+    }else{
+        infoIcons.classList.add("is-active");
+    }
+};
+
+infoIconsBotton.addEventListener("click", hideShowInfoIcons);
