@@ -24,12 +24,8 @@
     .filter-bar.is-active{
         left: 0;
     }
-    .info-bar{
-        width: 100px;
-    }
-    .icons-details{
-        margin: 0;
-    }
+
+
 }
 
 @media screen and (max-width:767px){

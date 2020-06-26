@@ -4,29 +4,53 @@ const dataPokemon = data.pokemon;
 const root = document.getElementById("root");
 
 const printCharacters = () => {
-    const view = dataPokemon.map((character, index) => {
-        return `
+    const view = dataPokemon.map((character) => {
+        let candyCount = character.candy_count;
+        if(candyCount === undefined){
+            candyCount = 0
+        }
+        return`
         <article class="pokemon-item">
             <a href="#/${character.id}/" class="card-container">
                 <img src="${character.img}" alt="${character.name}"
                 <h2>${character.name}</h2>
             </a>
-            <details id="pokemon-${index}"class="details-container">
-                <summary class="details-items">Detalles</summary>
+            <h1 class="details-items">Detalles</h1>
+            <section class="details-container">
                 <h2><span class="flaticon-fengshui icons-details"></span>${character.type}</h2>
                 <h2><span class="flaticon-dimension-of-line-height icons-details"></span>${character.height}</h2>
                 <h2><span class="flaticon-dumbbell icons-details"></span>${character.weight}</h2>
-                <h2><span class="flaticon-candy icons-details"></span>${character.candy_count} caramelos</h2>
-            </details>
+                <h2><span class="flaticon-candy icons-details"></span>${candyCount} caramelos</h2>
+            </section>
         </article>`
-    }
-    ).join('');
+    }).join('');
 
     root.innerHTML = view;
  }
 
-window.addEventListener("load", printCharacters);
+ function addEventsToCards() {
+    let pokeCards = document.querySelectorAll(".pokemon-item");
+    pokeCards.forEach(card => {
+        let pokeDetails = card.querySelector(".details-container")
+        const showDetails = () =>{
+            pokeDetails.classList.add("is-open");
+        }
+    
+        const hideDetails = () =>{
+            pokeDetails.classList.remove("is-open");
+        }
+        
+        card.addEventListener("mouseover", showDetails);
+        card.addEventListener("mouseout", hideDetails);
+    })
+ }
 
+window.addEventListener("load", () => {
+    printCharacters()
+    addEventsToCards()
+});
+
+// -----------------------------------------------------------------------------------------
 
 let menu = document.querySelector(".filter-bar");
 const burgerButton = document.querySelector("#burgerMenu");
@@ -40,3 +64,7 @@ const hideShow = () => {
 };
 
 burgerButton.addEventListener("click", hideShow);
+
+// ---------------------------------------------------------------------------------------------
+
+

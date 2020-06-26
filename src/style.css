@@ -113,7 +113,7 @@ main{
 .info-bar{
   background-color: var(--big-bar-color);
   height: 100px;
-  width: 150px;
+  width: 100px;
   padding: 15px 10px;
   display: flex;
   align-items: center;
@@ -183,6 +183,11 @@ main{
   width: 200px;
   padding: 20px 10px;
   background-color: var(--card-color);
+  display: none;
+}
+
+.details-container.is-open{
+  display: block;
 }
 
 .details-container h2{
@@ -193,16 +198,7 @@ main{
 }
 
 .details-items{
-  outline: none;
-}
-
-summary{
-  margin-bottom: 10px;
-  font-weight: bolder;
-}
-
-summary::-webkit-details-marker {
-  color: var(--biggest-bar-color);
+  font-size: 18px;
 }
 
 .icons-details{
