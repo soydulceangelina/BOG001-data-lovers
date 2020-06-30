@@ -81,6 +81,11 @@ header{
   font-size: 18px;
 }
 
+.menu-item a{
+  text-decoration: none;
+  color: var(--font-color);
+}
+
 .menu-item:hover{
   cursor: pointer;
   font-weight: bold;
