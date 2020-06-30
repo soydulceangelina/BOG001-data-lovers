@@ -4,28 +4,55 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="assets/font/flaticon.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   </head>
   <body>
+    <span class="flaticon-list burger-button" id="burgerMenu"></span>
     <header>
-        <section>
-      <img class = "icono" src = "assets/logoheader.png" alt = "Icono">
-      <ul class = "extra">
-      <li> Curiosidades </li>
-      <li> About </li>
-    </ul>
+      <section class="header-main">
+        <div class="header-logo-container">
+          <img class="header-logo" src="assets/logoheader.png" alt="PokeFan">
+        </div>
+        <ul class="header-menu-container">
+          <li class="menu-item">Curiosidades</li>
+          <li class="menu-item">Acerca de</li>
+        </ul>
       </section>
-    <menu>
-     <ul class = "menu">
-     <li>Pokemones</li>
-     <li>Ordenar del mas fuerte al mas debil</li>
-     <li>Ordenar por elemento</li>
-   </ul>
-   </menu>
-
+      <nav class="filter-bar">
+        <select class="filter-input">
+          <option>orden alfabético</option>
+          <option>de la A-Z</option>
+          <option>de la Z-A</option>
+        </select>
+        <select class="filter-input">
+          <option>orden por tipo</option>
+          <option>de la A-Z</option>
+          <option>de la Z-A</option>
+        </select>
+        <select class="filter-input">
+          <option>orden por poder</option>
+          <option>de la A-Z</option>
+          <option>de la Z-A</option>
+        </select>
+      </nav>
     </header>
-<main>
-  <section class="main-pokemon-container" id="root"></section>
-</main>
+    <main>
+      <section class="main-pokemon-container" id="root"></section>
+      <span class="flaticon-info info-button" id="infoMenu"></span>
+      <section class="info-bar">
+        <ul>
+          <li>Tipo: <span class="flaticon-fengshui icons-details"></span></li>
+          <li>Alto: <span class="flaticon-dimension-of-line-height icons-details"></span></li>
+          <li>Peso: <span class="flaticon-dumbbell icons-details"></span></li>
+          <li>Eat: <span class="flaticon-candy icons-details"></span></li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>Hecho con 💙 por Sara y Dulce</p>
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>
