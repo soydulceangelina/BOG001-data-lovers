@@ -1,9 +1,7 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
+export const filterForType = (type) => {
+  console.log(type);
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+

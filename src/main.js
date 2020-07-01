@@ -1,7 +1,8 @@
-// import { example } from './data.js';
+import { filterForType } from './data.js';
 import data from './data/pokemon/pokemon.js';
 const dataPokemon = data.pokemon;
 const root = document.getElementById("root");
+const typeFilter = document.getElementById("typeFilter");
 
 const printCharacters = () => {
     const view = dataPokemon.map((character) => {
@@ -28,7 +29,7 @@ const printCharacters = () => {
     root.innerHTML = view;
  };
 
- function addEventsToCards() {
+const addEventsToCards = () => {
     let pokeCards = document.querySelectorAll(".pokemon-item");
     pokeCards.forEach(card => {
         let pokeDetails = card.querySelector(".details-container")
@@ -45,9 +46,28 @@ const printCharacters = () => {
     })
  }
 
+const hideTypeFilter = () => {
+    const types = []
+    dataPokemon.forEach(({ type }) => {
+        type.forEach(t => {
+            if (!types.includes(t)) {
+                types.push(t)
+            }
+        })
+    })
+    const viewTypes = types.map((pokeType) => {
+        return`<option id="${pokeType}">${pokeType}</option>`
+    })
+    filterForType(types);
+    typeFilter.innerHTML= viewTypes;
+}
+
+
+
 window.addEventListener("load", () => {
     printCharacters()
     addEventsToCards()
+    hideTypeFilter()
 });
 
 // -----------------------------------------------------------------------------------------
