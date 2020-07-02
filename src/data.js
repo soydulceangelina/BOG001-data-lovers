@@ -1,4 +1,4 @@
-estas funciones son de ejemplo
+// estas funciones son de ejemplo
 
 export const filterForType = (type) => {
   console.log(type);
