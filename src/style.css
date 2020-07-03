@@ -294,6 +294,8 @@ main{
 
 .main-pokemon-container{
 
+  width: 100vw;
+
   margin: 30px 10%;
 
   display: flex;
