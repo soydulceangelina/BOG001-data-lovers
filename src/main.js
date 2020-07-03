@@ -1,31 +1,30 @@
-import { filterForType } from './data.js';
+import { filterByType } from './data.js';
 import data from './data/pokemon/pokemon.js';
 const dataPokemon = data.pokemon;
 const root = document.getElementById("root");
 const typeFilter = document.getElementById("typeFilter");
 
-const printCharacters = () => {
-    const view = dataPokemon.map((character) => {
-        let candyCount = character.candy_count;
-        if(candyCount === undefined){
-            candyCount = 0
-        }
-        return`
-            <article class="pokemon-item">
-                <a href="#/${character.id}/" class="card-container">
-                    <img src="${character.img}" alt="${character.name}"
-                    <h2>${character.name}</h2>
-                </a>
-                <h1 class="details-items">Detalles</h1>
-                <section class="details-container">
-                    <h2><span class="flaticon-fengshui icons-details"></span>${character.type}</h2>
-                    <h2><span class="flaticon-dimension-of-line-height icons-details"></span>${character.height}</h2>
-                    <h2><span class="flaticon-dumbbell icons-details"></span>${character.weight}</h2>
-                    <h2><span class="flaticon-candy icons-details"></span>${candyCount} caramelos</h2>
-                </section>
-            </article>`
-    }).join('');
-
+export const printCharacters = (avatars) => {
+        const view = avatars.map((character) => {
+            let candyCount = character.candy_count;
+            if(candyCount === undefined){
+                candyCount = 0
+            }
+            return`
+                <article class="pokemon-item">
+                    <a href="#/${character.id}/" class="card-container">
+                        <img src="${character.img}" alt="${character.name}"
+                        <h2>${character.name}</h2>
+                    </a>
+                    <h1 class="details-items">Detalles</h1>
+                    <section class="details-container">
+                        <h2><span class="flaticon-fengshui icons-details"></span>${character.type}</h2>
+                        <h2><span class="flaticon-dimension-of-line-height icons-details"></span>${character.height}</h2>
+                        <h2><span class="flaticon-dumbbell icons-details"></span>${character.weight}</h2>
+                        <h2><span class="flaticon-candy icons-details"></span>${candyCount} caramelos</h2>
+                    </section>
+                </article>`
+        }).join('');
     root.innerHTML = view;
  };
 
@@ -46,7 +45,7 @@ const addEventsToCards = () => {
     })
  }
 
-const hideTypeFilter = () => {
+const hideTypeMenu = () => {
     const types = []
     dataPokemon.forEach(({ type }) => {
         type.forEach(t => {
@@ -55,20 +54,29 @@ const hideTypeFilter = () => {
             }
         })
     })
-    const viewTypes = types.map((pokeType) => {
-        return`<option id="${pokeType}">${pokeType}</option>`
+
+
+    types.forEach((pokeType) => {
+        const option = document.createElement('option')
+        option.setAttribute('value', pokeType)
+        option.innerText = pokeType
+        typeFilter.appendChild(option)
     })
-    filterForType(types);
-    typeFilter.innerHTML= viewTypes;
 }
 
 
 
 window.addEventListener("load", () => {
-    printCharacters()
+    printCharacters(dataPokemon)
     addEventsToCards()
-    hideTypeFilter()
+    hideTypeMenu()
 });
+
+document.addEventListener("change", (event) =>{ 
+    let filtered = filterByType(event.target.value);
+    printCharacters(filtered)
+    addEventsToCards()
+})
 
 // -----------------------------------------------------------------------------------------
 
@@ -99,3 +107,4 @@ const hideShowInfoIcons = () => {
 };
 
 infoIconsBotton.addEventListener("click", hideShowInfoIcons);
+
