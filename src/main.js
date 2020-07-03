@@ -1,6 +1,9 @@
 import { filterByType } from './data.js';
+
 import data from './data/pokemon/pokemon.js';
+
 const dataPokemon = data.pokemon;
+
 const root = document.getElementById("root");
 const typeFilter = document.getElementById("typeFilter");
 
@@ -25,24 +28,41 @@ export const printCharacters = (avatars) => {
                     </section>
                 </article>`
         }).join('');
+
     root.innerHTML = view;
+
  };
 
 const addEventsToCards = () => {
+
     let pokeCards = document.querySelectorAll(".pokemon-item");
+
     pokeCards.forEach(card => {
+
         let pokeDetails = card.querySelector(".details-container")
+
         const showDetails = () =>{
+
             pokeDetails.classList.add("is-open");
+
         }
+
     
+
         const hideDetails = () =>{
+
             pokeDetails.classList.remove("is-open");
+
         }
+
         
+
         card.addEventListener("mouseover", showDetails);
+
         card.addEventListener("mouseout", hideDetails);
+
     })
+
  }
 
 const hideTypeMenu = () => {
@@ -78,32 +98,59 @@ document.addEventListener("change", (event) =>{
     addEventsToCards()
 })
 
+
 // -----------------------------------------------------------------------------------------
 
+
+
 let menu = document.querySelector(".filter-bar");
+
 const burgerButton = document.querySelector("#burgerMenu");
 
+
+
 const hideShow = () => {
+
     if(menu.classList.contains("is-active")){
+
         menu.classList.remove("is-active");
+
     }else{
+
         menu.classList.add("is-active");
+
     }
+
 };
+
+
 
 burgerButton.addEventListener("click", hideShow);
 
+
+
 // ---------------------------------------------------------------------------------------------
 
+
+
 let infoIcons = document.querySelector(".info-bar");
+
 const infoIconsBotton = document.querySelector("#infoMenu");
 
+
+
 const hideShowInfoIcons = () => {
+
     if(infoIcons.classList.contains("is-active")){
+
         infoIcons.classList.remove("is-active");
+
     }else{
+
         infoIcons.classList.add("is-active");
+
     }
+
 };
 
 infoIconsBotton.addEventListener("click", hideShowInfoIcons);
