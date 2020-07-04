@@ -72,7 +72,7 @@ window.addEventListener("load", () => {
     hideTypeMenu()
 });
 
-document.addEventListener("change", (event) =>{ 
+typeFilter.addEventListener("change", (event) =>{ 
     let filtered = filterByType(event.target.value);
     printCharacters(filtered)
     addEventsToCards()

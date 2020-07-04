@@ -129,6 +129,7 @@ main{
   bottom: 0;
   position: fixed;
   border-radius: 50px 0 0 0;
+  z-index: 3;
 }
 
 .info-bar ul li{
@@ -146,6 +147,7 @@ main{
 }
 
 .main-pokemon-container{
+  min-height: calc(100vh - 280px);
   width: 100vw;
   margin: 30px 10%;
   display: flex;
