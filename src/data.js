@@ -40,3 +40,14 @@ export const alfabeticFilter = (alfa) => {
 
   }
 }
+
+export const searchPokemon = (order) =>{
+  if(order === "") {
+    return data.pokemon;
+  }
+  else{
+    return data.pokemon.filter (poke =>{
+    return poke.name.toLowerCase().startsWith(order.toLowerCase())
+  })
+}
+}

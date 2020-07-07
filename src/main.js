@@ -1,11 +1,12 @@
 import { filterByType } from './data.js';
 import {alfabeticFilter} from './data.js';
 import data from './data/pokemon/pokemon.js';
+import {searchPokemon} from './data.js';
 const dataPokemon = data.pokemon;
 const root = document.getElementById("root");
 const typeFilter = document.getElementById("typeFilter");
 const ordenFilter = document.getElementById("ordenFilter");
-
+const search = document.getElementById("search");
 export const printCharacters = (avatars) => {
         const view = avatars.map((character) => {
             let candyCount = character.candy_count;
@@ -91,28 +92,15 @@ ordenFilter.addEventListener("change", (event) =>{
     addEventsToCards()
 })
 
+search.addEventListener("keyup", (event)=> {
+    let filtered = searchPokemon (event.target.value);
+    printCharacters(filtered)
+    addEventsToCards()
+})
 
 
 
 
-// var iordenFilter = [
-//     { name: '', value: 1 },
-//     { name: '', value: 2 },
-//     { name: '', value: 3 },
-//     { name: '', value: 4 },
-//     { name: '', value: 5 },
-//     { name: '', value: 6 }
-//   ];
-//   ordenFilter.sort(function (a, b) {
-//     if (a.name > b.name) {
-//       return 1;
-//     }
-//     if (a.name < b.name) {
-//       return -1;
-//     }
-   
-//     return 0;
-//   });
 
 // -----------------------------------------------------------------------------------------
 

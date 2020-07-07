@@ -16,9 +16,12 @@ describe('filterByType', () => {
 
 describe('alfabeticFilter', () => {
   it('debería ser una funcion', () => {
-    expect(typeof filterByType).toBe('function');
+    expect(typeof alfabeticFilter).toBe('function');
   });
-
-  it.skip('returns `anotherExample`', () => {
+  it('debería retornar un arreglo', () => {
+    expect(alfabeticFilter("a-z")).toBe("[object]");
+  });
+  it('debería retornar la data', () => {
+    expect(typeof alfabeticFilter("")).toBe("object");
   });
 });
