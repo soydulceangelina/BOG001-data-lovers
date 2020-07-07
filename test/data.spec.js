@@ -19,7 +19,7 @@ describe('alfabeticFilter', () => {
     expect(typeof alfabeticFilter).toBe('function');
   });
   it('debería retornar un arreglo', () => {
-    expect(alfabeticFilter("a-z")).toBe("[object]");
+    expect(typeof alfabeticFilter("a-z")).toBe("object");
   });
   it('debería retornar la data', () => {
     expect(typeof alfabeticFilter("")).toBe("object");

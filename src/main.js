@@ -1,4 +1,4 @@
-import { filterByType } from './data.js';
+import {filterByType} from './data.js';
 import {alfabeticFilter} from './data.js';
 import data from './data/pokemon/pokemon.js';
 import {searchPokemon} from './data.js';
