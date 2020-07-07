@@ -1,23 +1,24 @@
-import { example, anotherExample } from '../src/data.js';
+import {filterByType} from '../src/data.js';
+import {alfabeticFilter} from '../src/data.js';
 
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('filterByType', () => {
+  it('debería ser una funcion', () => {
+    expect(typeof filterByType).toBe('function');
   });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('debería retornar un arreglo', () => {
+    expect(filterByType()).toStrictEqual([]);
+  });
+  it('debería retornar la data', () => {
+    expect(typeof filterByType("")).toBe("object");
   });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+describe('alfabeticFilter', () => {
+  it('debería ser una funcion', () => {
+    expect(typeof filterByType).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it.skip('returns `anotherExample`', () => {
   });
 });

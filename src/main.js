@@ -1,34 +1,41 @@
-// import { example } from './data.js';
+import { filterByType } from './data.js';
+import {alfabeticFilter} from './data.js';
 import data from './data/pokemon/pokemon.js';
 const dataPokemon = data.pokemon;
 const root = document.getElementById("root");
+const typeFilter = document.getElementById("typeFilter");
+const ordenFilter = document.getElementById("ordenFilter");
 
-const printCharacters = () => {
-    const view = dataPokemon.map((character) => {
-        let candyCount = character.candy_count;
-        if(candyCount === undefined){
-            candyCount = 0
-        }
-        return`
-        <article class="pokemon-item">
-            <a href="#/${character.id}/" class="card-container">
-                <img src="${character.img}" alt="${character.name}"
-                <h2>${character.name}</h2>
-            </a>
-            <h1 class="details-items">Detalles</h1>
-            <section class="details-container">
-                <h2><span class="flaticon-fengshui icons-details"></span>${character.type}</h2>
-                <h2><span class="flaticon-dimension-of-line-height icons-details"></span>${character.height}</h2>
-                <h2><span class="flaticon-dumbbell icons-details"></span>${character.weight}</h2>
-                <h2><span class="flaticon-candy icons-details"></span>${candyCount} caramelos</h2>
-            </section>
-        </article>`
-    }).join('');
+export const printCharacters = (avatars) => {
+        const view = avatars.map((character) => {
+            let candyCount = character.candy_count;
+            if(candyCount === undefined){
+                candyCount = 0
+            }
+            return`
+                <article class="pokemon-item">
+                    <a href="#/${character.id}/" class="card-container">
+                        <img src="${character.img}" alt="${character.name}"
+                        <h2>${character.name}</h2>
+                    </a>
+                    <h1 class="details-items">Detalles</h1>
+                    <section class="details-container">
+                        <h2><span class="flaticon-fengshui icons-details"></span>${character.type}</h2>
+                        <h2><span class="flaticon-dimension-of-line-height icons-details"></span>${character.height}</h2>
+                        <h2><span class="flaticon-dumbbell icons-details"></span>${character.weight}</h2>
+                        <h2><span class="flaticon-candy icons-details"></span>${candyCount} caramelos</h2>
+                    </section>
+                </article>`
+        }).join('');
+
 
     root.innerHTML = view;
  };
 
- function addEventsToCards() {
+
+const addEventsToCards = () => {
+
+
     let pokeCards = document.querySelectorAll(".pokemon-item");
     pokeCards.forEach(card => {
         let pokeDetails = card.querySelector(".details-container")
@@ -45,10 +52,67 @@ const printCharacters = () => {
     })
  }
 
+const hideTypeMenu = () => {
+    const types = []
+    dataPokemon.forEach(({ type }) => {
+        type.forEach(t => {
+            if (!types.includes(t)) {
+                types.push(t)
+            }
+        })
+    })
+
+
+    types.forEach((pokeType) => {
+        const option = document.createElement('option')
+        option.setAttribute('value', pokeType)
+        option.innerText = pokeType
+        typeFilter.appendChild(option)
+    })
+}
+
+
+
 window.addEventListener("load", () => {
-    printCharacters()
+    printCharacters(dataPokemon)
     addEventsToCards()
+    hideTypeMenu()
 });
+
+typeFilter.addEventListener("change", (event) =>{ 
+    let filtered = filterByType(event.target.value);
+    printCharacters(filtered)
+    addEventsToCards()
+})
+
+ordenFilter.addEventListener("change", (event) =>{
+    let filtered = alfabeticFilter(event.target.value);
+    printCharacters(filtered)
+    addEventsToCards()
+})
+
+
+
+
+
+// var iordenFilter = [
+//     { name: '', value: 1 },
+//     { name: '', value: 2 },
+//     { name: '', value: 3 },
+//     { name: '', value: 4 },
+//     { name: '', value: 5 },
+//     { name: '', value: 6 }
+//   ];
+//   ordenFilter.sort(function (a, b) {
+//     if (a.name > b.name) {
+//       return 1;
+//     }
+//     if (a.name < b.name) {
+//       return -1;
+//     }
+   
+//     return 0;
+//   });
 
 // -----------------------------------------------------------------------------------------
 
