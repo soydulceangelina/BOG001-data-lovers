@@ -21,23 +21,20 @@
           <li class="menu-item">Acerca de</li>
         </ul>
       </section>
-      <nav class="filter-bar">    
-        <select class="filter-input">
-          <option>orden alfabético</option>
-          <option>de la A-Z</option>
-          <option>de la Z-A</option>
+      <nav class="filter-bar">   
+        <select class="filter-input" id="ordenFilter">
+          <option value= ""> orden alfabétic</option>
+          <option value="a-z">de la A-Z</option>
+          <option value="z-a">de la Z-A</option>
         </select>
         <select class="filter-input" id="typeFilter">
           <option value="">Selecciona un tipo</option>
         </select>
-        <select class="filter-input">
-          <option>orden por poder</option>
-          <option>de la A-Z</option>
-          <option>de la Z-A</option>
-        </select>
+        <input type="text" class="filter-input" id="search" placeholder="Buscar Pokémon">
       </nav>
     </header>
     <main>
+      <h1 id="nonExistentPokemon"></h1>
       <section class="main-pokemon-container" id="root"></section>
       <span class="flaticon-info info-button" id="infoMenu"></span>
       <section class="info-bar">

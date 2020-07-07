@@ -9,5 +9,44 @@ export const filterByType = (typePoke) => {
     })
   }
 };
- 
 
+export const alfabeticFilter = (alfa) => {
+  const pokemons = [...data.pokemon]
+  if (alfa === ""){
+    return pokemons;
+  }
+  if (alfa === "a-z"){
+    return pokemons.sort((prev, next) => {
+      if(prev.name > next.name){
+        return 1;  
+      }
+      if(prev.name < next.name){
+        return -1;
+      }
+      return 0; 
+    })
+
+  }
+  if(alfa === "z-a"){
+    return pokemons.sort((prev, next) => {
+      if(prev.name < next.name){
+        return 1;  
+      }
+      if (prev.name > next.name){
+        return -1;
+      }
+      return 0; 
+    })
+  }
+}
+
+export const searchPokemon = (order) => {
+  if(order === "") {
+    return data.pokemon;
+  }
+  else{
+    return data.pokemon.filter (poke => {
+      return poke.name.toLowerCase().startsWith(order.toLowerCase())
+    })
+  }
+}

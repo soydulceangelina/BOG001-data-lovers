@@ -1,8 +1,12 @@
 import { filterByType } from './data.js';
+import { alfabeticFilter } from './data.js';
+import { searchPokemon } from './data.js';
 import data from './data/pokemon/pokemon.js';
 const dataPokemon = data.pokemon;
 const root = document.getElementById("root");
 const typeFilter = document.getElementById("typeFilter");
+const ordenFilter = document.getElementById("ordenFilter");
+const search = document.getElementById("search");
 
 export const printCharacters = (avatars) => {
         const view = avatars.map((character) => {
@@ -64,7 +68,9 @@ const hideTypeMenu = () => {
     })
 }
 
-
+const nonExistent = () =>{
+    root.innerHTML = "Pokémon no encontrado";
+}
 
 window.addEventListener("load", () => {
     printCharacters(dataPokemon)
@@ -76,6 +82,22 @@ typeFilter.addEventListener("change", (event) =>{
     let filtered = filterByType(event.target.value);
     printCharacters(filtered)
     addEventsToCards()
+})
+
+ordenFilter.addEventListener("change", (event) =>{
+    let filtered = alfabeticFilter(event.target.value);
+    printCharacters(filtered)
+    addEventsToCards()
+})
+
+search.addEventListener("keyup", (event)=> {
+    let filtered = searchPokemon (event.target.value);
+    if(filtered.length === 0){
+        nonExistent();
+    }else{
+        printCharacters(filtered);
+        addEventsToCards();
+    }
 })
 
 // -----------------------------------------------------------------------------------------
