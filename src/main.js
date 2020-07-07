@@ -29,6 +29,7 @@ export const printCharacters = (avatars) => {
                     </section>
                 </article>`
         }).join('');
+
     root.innerHTML = view;
  };
 
@@ -39,14 +40,13 @@ const addEventsToCards = () => {
         const showDetails = () =>{
             pokeDetails.classList.add("is-open");
         }
-    
         const hideDetails = () =>{
             pokeDetails.classList.remove("is-open");
         }
-        
         card.addEventListener("mouseover", showDetails);
         card.addEventListener("mouseout", hideDetails);
     })
+
  }
 
 const hideTypeMenu = () => {
@@ -58,7 +58,6 @@ const hideTypeMenu = () => {
             }
         })
     })
-
 
     types.forEach((pokeType) => {
         const option = document.createElement('option')

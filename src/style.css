@@ -7,7 +7,6 @@
     --highlighter-color: #b8e0ff;
     --card-color: #fbfbf9;
     --font-color: #202329;
-
 }
 
 *{
@@ -86,6 +85,8 @@ header{
   color: var(--font-color);
 }
 
+
+
 .menu-item:hover{
   cursor: pointer;
   font-weight: bold;
@@ -100,6 +101,8 @@ header{
   align-items: center;
   position: static;
 }
+
+
 
 .filter-input{
   font-family: 'Montserrat Alternates', sans-serif;
