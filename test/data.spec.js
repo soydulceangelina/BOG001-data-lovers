@@ -38,6 +38,11 @@ describe('searchPokemon', () => {
     expect(typeof searchPokemon).toBe('function');
   });
 
-  it.skip('returns `anotherExample`', () => {
+  it('debería ser un objeto', () => {
+    expect(typeof searchPokemon("pikachu")).toBe("object");
+  });
+
+  it('debería ser un objeto', () => {
+    expect(typeof searchPokemon("")).toBe("object");
   });
 });
