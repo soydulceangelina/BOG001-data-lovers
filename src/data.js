@@ -23,7 +23,6 @@ export const alfabeticFilter = (alfa) => {
       if(prev.name < next.name){
         return -1;
       }
-      return 0; 
     })
 
   }
@@ -34,8 +33,7 @@ export const alfabeticFilter = (alfa) => {
       }
       if (prev.name > next.name){
         return -1;
-      }
-      return 0; 
+      } 
     })
   }
 }
