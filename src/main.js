@@ -1,12 +1,15 @@
-import {filterByType} from './data.js';
-import {alfabeticFilter} from './data.js';
+import { filterByType } from './data.js';
+import { alfabeticFilter } from './data.js';
+import { searchPokemon } from './data.js';
 import data from './data/pokemon/pokemon.js';
-import {searchPokemon} from './data.js';
+
 const dataPokemon = data.pokemon;
 const root = document.getElementById("root");
 const typeFilter = document.getElementById("typeFilter");
 const ordenFilter = document.getElementById("ordenFilter");
 const search = document.getElementById("search");
+
+
 export const printCharacters = (avatars) => {
         const view = avatars.map((character) => {
             let candyCount = character.candy_count;
@@ -29,13 +32,11 @@ export const printCharacters = (avatars) => {
                 </article>`
         }).join('');
 
-
     root.innerHTML = view;
  };
 
 
 const addEventsToCards = () => {
-
 
     let pokeCards = document.querySelectorAll(".pokemon-item");
     pokeCards.forEach(card => {
@@ -43,11 +44,11 @@ const addEventsToCards = () => {
         const showDetails = () =>{
             pokeDetails.classList.add("is-open");
         }
-    
+
         const hideDetails = () =>{
             pokeDetails.classList.remove("is-open");
         }
-        
+
         card.addEventListener("mouseover", showDetails);
         card.addEventListener("mouseout", hideDetails);
     })
@@ -62,7 +63,6 @@ const hideTypeMenu = () => {
             }
         })
     })
-
 
     types.forEach((pokeType) => {
         const option = document.createElement('option')
@@ -84,7 +84,8 @@ window.addEventListener("load", () => {
 });
 
 typeFilter.addEventListener("change", (event) =>{
-    const filteredByOrder = alfabeticFilter(ordenFilter.value)
+
+    const filteredByOrder = alfabeticFilter(ordenFilter.value);
     const filteredByName = searchPokemon(search.value, filteredByOrder);
     const filtered = filterByType(event.target.value, filteredByName);
     printCharacters(filtered)
@@ -110,16 +111,6 @@ search.addEventListener("keyup", (event)=> {
         addEventsToCards();
     }
 })
-
-// -----------------------------------------------------------------------------------------
-
-let menu = document.querySelector(".filter-bar");
-const burgerButton = document.querySelector("#burgerMenu");
-
-const hideShow = () => {
-    if(menu.classList.contains("is-active")){
-        menu.
-
 
 // -----------------------------------------------------------------------------------------
 

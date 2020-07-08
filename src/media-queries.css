@@ -1,4 +1,7 @@
 @media screen and (max-width:1023px){
+    .main-pokemon-container{
+        min-height: calc(100vh - 260px);
+    }
     .burger-button{
         display: block;
     }
@@ -25,6 +28,12 @@
         left: 0;
     }
 
+    .info-bar{
+        width: 100px;
+    }
+    .icons-details{
+        margin: 0;
+    }
 
 }
 
@@ -58,9 +67,11 @@
         background-color: rgba(254, 156, 89,.9);
         transition: 0.3s;
     }
+
     .info-button{
         display: block;
     }
+
     .info-bar.is-active{
         right: 0;
     }
@@ -90,6 +101,3 @@
 
 }
 
-@media screen and (max-width:319px){
-    
-}

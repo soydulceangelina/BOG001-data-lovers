@@ -1,100 +1,58 @@
 <!DOCTYPE html>
-
 <html>
-
   <head>
-
     <meta charset="utf-8">
-
-    <title>Data Lovers</title>
-
+    <title>PokémonFan</title>
+    <link rel="icon" href="assets/meowth.png" />
     <link rel="stylesheet" href="style.css" />
-
     <link rel="stylesheet" href="media-queries.css">
-
     <link rel="stylesheet" href="assets/font/flaticon.css">
-
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-
   </head>
-
   <body>
-
     <span class="flaticon-list burger-button" id="burgerMenu"></span>
-
     <header>
-
       <section class="header-main">
-
         <div class="header-logo-container">
-
           <img class="header-logo" src="assets/logoheader.png" alt="PokeFan">
-
         </div>
-
         <ul class="header-menu-container">
-
-          <li class="menu-item"><a href="/src/curiosidades.html">Curiosidades</a></li>
-
+          <li class="menu-item"><a href="curiosidades.html">Curiosidades</a></li>
           <li class="menu-item">Acerca de</li>
-
         </ul>
-
       </section>
 
-      <nav class="filter-bar">    
-
+      <nav class="filter-bar">   
         <select class="filter-input" id="ordenFilter">
-
-          <option value= ""> orden alfabétic</option>
-
+          <option value= ""> Orden alfabético</option>
           <option value="a-z">de la A-Z</option>
-
           <option value="z-a">de la Z-A</option>
 
-        </select>
 
+
+        </select>
         <select class="filter-input" id="typeFilter">
           <option value="">Selecciona un tipo</option>
         </select>
 
-      <input type="text" class= "filter-input" id="search" placeholder="buscar pokemon">
+        <input type="text" class="filter-input" id="search" placeholder="Buscar Pokémon">
       </nav>
-
     </header>
-
     <main>
-
       <section class="main-pokemon-container" id="root"></section>
-
       <span class="flaticon-info info-button" id="infoMenu"></span>
-
       <section class="info-bar">
-
         <ul>
-
           <li><h3>Tipo:</h3><span class="flaticon-fengshui icons-details"></span></li>
-
           <li><h3>Alto:</h3><span class="flaticon-dimension-of-line-height icons-details"></span></li>
-
           <li><h3>Peso:</h3><span class="flaticon-dumbbell icons-details"></span></li>
-
           <li><h3>Eat:</h3><span class="flaticon-candy icons-details"></span></li>
-
         </ul>
-
       </section>
-
     </main>
-
     <footer>
-
       <p>Hecho con 💙 por Sara y Dulce</p>
-
     </footer>
-
     <script src="main.js" type="module"></script>
-
   </body>
-
 </html>
