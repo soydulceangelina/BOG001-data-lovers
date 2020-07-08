@@ -31,6 +31,10 @@ describe('alfabeticFilter', () => {
   it('debería ser un objeto', () => {
     expect(typeof alfabeticFilter("a-z")).toBe("object");
   });
+
+  it('debería retornar false para [{"name": "Bulbasaur"},{"name": "charmander"}]', () => {
+    expect(alfabeticFilter([{"name": "Bulbasaur"},{"name": "charmander"}])).toBeFalsy();
+  });
 });
 
 describe('searchPokemon', () => {

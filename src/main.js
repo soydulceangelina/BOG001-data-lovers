@@ -77,20 +77,26 @@ window.addEventListener("load", () => {
     hideTypeMenu()
 });
 
-typeFilter.addEventListener("change", (event) =>{ 
-    let filtered = filterByType(event.target.value);
+typeFilter.addEventListener("change", (event) =>{
+    const filteredByOrder = alfabeticFilter(ordenFilter.value)
+    const filteredByName = searchPokemon(search.value, filteredByOrder);
+    const filtered = filterByType(event.target.value, filteredByName);
     printCharacters(filtered)
     addEventsToCards()
 })
 
 ordenFilter.addEventListener("change", (event) =>{
-    let filtered = alfabeticFilter(event.target.value);
+    const filteredByName = searchPokemon(search.value);
+    const filteredByType = filterByType(typeFilter.value, filteredByName);
+    const filtered = alfabeticFilter(event.target.value, filteredByType);
     printCharacters(filtered)
     addEventsToCards()
 })
 
 search.addEventListener("keyup", (event)=> {
-    let filtered = searchPokemon (event.target.value);
+    const filteredByOrder = alfabeticFilter(ordenFilter.value);
+    const filteredByType = filterByType(typeFilter.value, filteredByOrder);
+    const filtered = searchPokemon(event.target.value, filteredByType);
     if(filtered.length === 0){
         nonExistent();
     }else{
