@@ -78,7 +78,7 @@ window.addEventListener("load", () => {
 });
 
 typeFilter.addEventListener("change", (event) =>{
-    const filteredByOrder = alfabeticFilter(ordenFilter.value)
+    const filteredByOrder = alfabeticFilter(ordenFilter.value);
     const filteredByName = searchPokemon(search.value, filteredByOrder);
     const filtered = filterByType(event.target.value, filteredByName);
     printCharacters(filtered)
