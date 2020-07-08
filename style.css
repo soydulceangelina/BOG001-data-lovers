@@ -7,7 +7,6 @@
     --highlighter-color: #b8e0ff;
     --card-color: #fbfbf9;
     --font-color: #202329;
-
 }
 
 *{
@@ -86,6 +85,8 @@ header{
   color: var(--font-color);
 }
 
+
+
 .menu-item:hover{
   cursor: pointer;
   font-weight: bold;
@@ -100,6 +101,8 @@ header{
   align-items: center;
   position: static;
 }
+
+
 
 .filter-input{
   font-family: 'Montserrat Alternates', sans-serif;
@@ -129,6 +132,7 @@ main{
   bottom: 0;
   position: fixed;
   border-radius: 50px 0 0 0;
+  z-index: 3;
 }
 
 .info-bar ul li{
@@ -146,6 +150,8 @@ main{
 }
 
 .main-pokemon-container{
+  min-height: calc(100vh - 340px);
+  width: 100vw;
   margin: 30px 10%;
   display: flex;
   flex-wrap: wrap;

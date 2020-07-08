@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>PokémonFan</title>
+    <link rel="icon" href="assets/meowth.png" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media-queries.css">
     <link rel="stylesheet" href="assets/font/flaticon.css">
@@ -16,26 +17,20 @@
           <img class="header-logo" src="assets/logoheader.png" alt="PokeFan">
         </div>
         <ul class="header-menu-container">
-          <li class="menu-item"><a href="/src/curiosidades.html">Curiosidades</a></li>
+          <li class="menu-item"><a href="curiosidades.html">Curiosidades</a></li>
           <li class="menu-item">Acerca de</li>
         </ul>
       </section>
-      <nav class="filter-bar">    
-        <select class="filter-input">
-          <option>orden alfabético</option>
-          <option>de la A-Z</option>
-          <option>de la Z-A</option>
+      <nav class="filter-bar">   
+        <select class="filter-input" id="ordenFilter">
+          <option value= ""> Orden alfabético</option>
+          <option value="a-z">de la A-Z</option>
+          <option value="z-a">de la Z-A</option>
         </select>
-        <select class="filter-input">
-          <option>orden por tipo</option>
-          <option>de la A-Z</option>
-          <option>de la Z-A</option>
+        <select class="filter-input" id="typeFilter">
+          <option value="">Selecciona un tipo</option>
         </select>
-        <select class="filter-input">
-          <option>orden por poder</option>
-          <option>de la A-Z</option>
-          <option>de la Z-A</option>
-        </select>
+        <input type="text" class="filter-input" id="search" placeholder="Buscar Pokémon">
       </nav>
     </header>
     <main>
