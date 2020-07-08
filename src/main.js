@@ -73,6 +73,9 @@ const hideTypeMenu = () => {
 }
 
 
+const nonExistent = () =>{
+    root.innerHTML = "Pokémon no encontrado";
+}
 
 window.addEventListener("load", () => {
     printCharacters(dataPokemon)
@@ -80,26 +83,42 @@ window.addEventListener("load", () => {
     hideTypeMenu()
 });
 
-typeFilter.addEventListener("change", (event) =>{ 
-    let filtered = filterByType(event.target.value);
+typeFilter.addEventListener("change", (event) =>{
+    const filteredByOrder = alfabeticFilter(ordenFilter.value)
+    const filteredByName = searchPokemon(search.value, filteredByOrder);
+    const filtered = filterByType(event.target.value, filteredByName);
     printCharacters(filtered)
     addEventsToCards()
 })
 
 ordenFilter.addEventListener("change", (event) =>{
-    let filtered = alfabeticFilter(event.target.value);
+    const filteredByName = searchPokemon(search.value);
+    const filteredByType = filterByType(typeFilter.value, filteredByName);
+    const filtered = alfabeticFilter(event.target.value, filteredByType);
     printCharacters(filtered)
     addEventsToCards()
 })
 
 search.addEventListener("keyup", (event)=> {
-    let filtered = searchPokemon (event.target.value);
-    printCharacters(filtered)
-    addEventsToCards()
+    const filteredByOrder = alfabeticFilter(ordenFilter.value);
+    const filteredByType = filterByType(typeFilter.value, filteredByOrder);
+    const filtered = searchPokemon(event.target.value, filteredByType);
+    if(filtered.length === 0){
+        nonExistent();
+    }else{
+        printCharacters(filtered);
+        addEventsToCards();
+    }
 })
 
+// -----------------------------------------------------------------------------------------
 
+let menu = document.querySelector(".filter-bar");
+const burgerButton = document.querySelector("#burgerMenu");
 
+const hideShow = () => {
+    if(menu.classList.contains("is-active")){
+        menu.
 
 
 // -----------------------------------------------------------------------------------------
