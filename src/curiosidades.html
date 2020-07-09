@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PokémonFan</title>
+    <link rel="icon" href="assets/meowth.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="assets/font/flaticon.css">
+    <link rel="stylesheet" href="canvas.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 </head>
 <body>
-    estoy en curiosidades :D
+    <header>
+        <section class="header-main">
+            <div class="header-logo-container">
+              <img class="header-logo" src="assets/logoheader.png" alt="PokeFan">
+            </div>
+            <ul class="header-menu-container">
+              <li class="menu-item"><a href="/src/curiosidades.html">Curiosidades</a></li>
+              <li class="menu-item">Acerca de</li>
+            </ul>
+          </section>
+    </header>
+    <main>
+        <h2 class="title">Altura de los pokémones favoritos de los fans!</h2>
+        <div class="container-chart">
+            <div class="container-chart-item">
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+            <div class="cards-container">
+                <section id="cards"></section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Hecho con 💙 por Sara y Dulce</p>
+      </footer>
+    <script src="chart.js" type="module"></script>
 </body>
 </html>
