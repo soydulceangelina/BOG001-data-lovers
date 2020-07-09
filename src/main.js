@@ -2,11 +2,13 @@ import { filterByType } from './data.js';
 import { alfabeticFilter } from './data.js';
 import { searchPokemon } from './data.js';
 import data from './data/pokemon/pokemon.js';
+
 const dataPokemon = data.pokemon;
 const root = document.getElementById("root");
 const typeFilter = document.getElementById("typeFilter");
 const ordenFilter = document.getElementById("ordenFilter");
 const search = document.getElementById("search");
+
 
 export const printCharacters = (avatars) => {
         const view = avatars.map((character) => {
@@ -33,20 +35,23 @@ export const printCharacters = (avatars) => {
     root.innerHTML = view;
  };
 
+
 const addEventsToCards = () => {
+
     let pokeCards = document.querySelectorAll(".pokemon-item");
     pokeCards.forEach(card => {
         let pokeDetails = card.querySelector(".details-container")
         const showDetails = () =>{
             pokeDetails.classList.add("is-open");
         }
+
         const hideDetails = () =>{
             pokeDetails.classList.remove("is-open");
         }
+
         card.addEventListener("mouseover", showDetails);
         card.addEventListener("mouseout", hideDetails);
     })
-
  }
 
 const hideTypeMenu = () => {
@@ -67,6 +72,7 @@ const hideTypeMenu = () => {
     })
 }
 
+
 const nonExistent = () =>{
     root.innerHTML = "Pokémon no encontrado";
 }
@@ -78,6 +84,7 @@ window.addEventListener("load", () => {
 });
 
 typeFilter.addEventListener("change", (event) =>{
+
     const filteredByOrder = alfabeticFilter(ordenFilter.value);
     const filteredByName = searchPokemon(search.value, filteredByOrder);
     const filtered = filterByType(event.target.value, filteredByName);
@@ -134,4 +141,3 @@ const hideShowInfoIcons = () => {
 };
 
 infoIconsBotton.addEventListener("click", hideShowInfoIcons);
-

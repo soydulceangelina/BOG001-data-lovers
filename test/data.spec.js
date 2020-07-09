@@ -3,6 +3,7 @@ import { alfabeticFilter } from '../src/data.js';
 import { searchPokemon } from '../src/data.js';
 
 
+
 describe('filterByType', () => {
   it('debería ser una funcion', () => {
     expect(typeof filterByType).toBe('function');
@@ -41,6 +42,7 @@ describe('searchPokemon', () => {
   it('debería ser una funcion', () => {
     expect(typeof searchPokemon).toBe('function');
   });
+
 
   it('debería ser un objeto', () => {
     expect(typeof searchPokemon("pikachu")).toBe("object");
