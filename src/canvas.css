@@ -5,12 +5,19 @@ main{
 }
 
 .title{
-  padding: 15px 0 0 15px;
+  padding: 30px 0 20px 15px;
   background-color: rgba(255, 203, 5,.7);
+  text-align: center;
 }
+
+.titleII{
+  padding: 30px 0 30px 15px;
+  background-color: rgba(42, 117, 187,.7);
+  text-align: center;
+}
+
 .container-chart{
   width: 100%;
-  height: 100%;
   padding: 30px 0;
   display: flex;
   justify-content: space-evenly;
@@ -20,16 +27,56 @@ main{
 }
 
 
-#cards{
+.cards-pokemon{
+  width: 590px;
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .container-chart-item{
-  width: 20%;
+  width: 330px;
   position: relative;
 }
 
-#myChart{
-  position: absolute;
+.icon{
+  margin-top: 10px;
+}
+
+.flaticon::before{
+  margin-left: 0;
+}
+
+.pokemon-cards-canva{
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cards-evolution{
+  display: flex;
+}
+
+.card-container-evolution{
+  background-color: var(--card-color);
+  height: 180px;
+  width: 200px;
+  text-align: center;
+  margin: 4%;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 10px 10px 9px -2px rgba(27,27,38,0.4);
+}
+
+
+.evolution-pokemon{
+  background-color: rgba(42, 117, 187,.7);
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
