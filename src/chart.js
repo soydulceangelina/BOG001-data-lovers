@@ -63,7 +63,6 @@ export const printEvolution = () => {
 export const carousel = () => {
     let x = document.querySelectorAll(".cards-evolution");
     for(let i = 0; i < x.length; i++){
-        console.log(x);
         x[i].style.display = "none";
     }
     slideIndex++;
@@ -85,6 +84,8 @@ const heightFavPokemon = dataPokemon.map((character)=>{
 
 
 
+// eslint-disable-next-line no-unused-vars no-undef
+// eslint-disable-next-line 
 const ourCanvas = new Chart(myChart,{
     type:"bar",
     data:{
