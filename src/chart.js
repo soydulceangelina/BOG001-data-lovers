@@ -1,6 +1,7 @@
 import data from './data/pokemon/pokemon.js';
 const dataPokemon = data.pokemon;
 const myChart = document.querySelector("#myChart").getContext("2d");
+const myOtherChart = document.querySelector("#myOtherChart").getContext("2d");
 const newPokeData = [{name:"Pikachu", height:0.71},{name:"Charizard", height:1.70},{name:"Squirtle", height:0.51},{name:"Jigglypuff", height:0.51},{name:"Eevee", height:0.30}];
 const cardsContainer = document.getElementById("cards");
 
@@ -24,7 +25,7 @@ export const printCharactersTall = () => {
 window.addEventListener("load", printCharactersTall);
 
 const ourCanvas = new Chart(myChart,{
-    type:"doughnut",
+    type:"bar",
     data:{
         labels: newPokeData.map(p => p.name),
         datasets: [{
@@ -43,3 +44,5 @@ const ourCanvas = new Chart(myChart,{
         responsive: true
     }
 });
+
+const ourOtherCanvas = new Chart(myOtherChart)
