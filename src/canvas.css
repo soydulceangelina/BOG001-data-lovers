@@ -40,7 +40,6 @@ main{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgba(255, 203, 5,.7);
   position: relative;
 }
 #card{
@@ -49,6 +48,7 @@ main{
 }
 .container-charts-item{
   width: 300px;
+  padding: 150px;
   position: relative;
   //*display: flex;*//
   
