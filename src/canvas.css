@@ -50,8 +50,6 @@ main{
   width: 300px;
   padding: 150px;
   position: relative;
-  //*display: flex;*//
-  
 }
 #myCharts{ 
   position: absolute;
@@ -66,9 +64,6 @@ main{
     margin-top: 40px;
   }
 }
-
-}
-
 @media screen and (max-width:480px){
   .container-chart-item{
     width: 300px;
