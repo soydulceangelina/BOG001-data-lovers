@@ -1,5 +1,4 @@
 import data from './data/pokemon/pokemon.js';
-
 export const filterByType = (typePoke, pokeData = data.pokemon) => {
   if(typePoke === ""){
     return pokeData;
@@ -9,7 +8,6 @@ export const filterByType = (typePoke, pokeData = data.pokemon) => {
     })
   }
 };
-
 export const alfabeticFilter = (alfa, pokeData = data.pokemon) => {
   const pokemons = [...pokeData]
   if (alfa === ""){
@@ -46,3 +44,4 @@ export const searchPokemon = (order, pokeData = data.pokemon) => {
     })
   }
 }
+

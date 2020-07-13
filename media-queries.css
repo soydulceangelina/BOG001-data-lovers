@@ -34,6 +34,7 @@
     .icons-details{
         margin: 0;
     }
+
 }
 
 @media screen and (max-width:767px){
@@ -97,5 +98,9 @@
     .filter-input{
         width: 70%;
     }
+
+}
+
+@media screen and (max-width:319px){
 
 }
