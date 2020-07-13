@@ -1,24 +1,70 @@
-# Data Lovers
+<figure>
+<img width="500px" src="src/assets/logoheader.png">
+</figure>
 
-## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+* [1. Definición del producto](#1-definición-del-producto)
+* [2. Historias de usuarios](#2-historias-de-usuarios)
+* [3. Prototipos de baja fidelidad](#3-prototipos-de-baja-fidelidad)
+* [4. Prototipos de alta fidelidad](#4-prototipos-de-alta-fidelidad)
+* [5. Test de usabilidad](#5-test-de-usabilidad)
+* [6. Objetivos de aprendizaje](#6-objetivos-de-aprendizaje)
+
 
 ***
 
-## 1. Preámbulo
+## 1. Definición del producto
 
-## 2. Resumen del proyecto
+Aplicacion creada para usuarios nuevos y fans de pokémon y pokémonGO, aqui podran encontrar su pokémon favorito, conocer otros nuevos, cuantos caramelos necesitan para evolucionar y mucho mas. Buscamos y encontramos los objetivos mas comunes en los usuarios al ingresar a este tipo de APPs, y luego resolvimos los problemas a traves de una interfaz facil de usar y legible.
 
-## 3. Objetivos de aprendizaje
+## 2. Historias de usuarios
+
+1. Como jugador de Pokemon Go, quiero ver todos los pokemon en la pantalla, para identificar los que no conozca.
+2. Como fan de pokemon GO, quiero poder filtrar el avatar segun su tipo, para saber cuantos hay por categoría.
+3. Como jugador, quiero ordenar los avatares por orden alfabético, para tener mas orden.
+4. Como conocedor del juego y de los personajes, quiero buscar un Pokémon en especifico, para leer solo las características de este y encontrarlo rápidamente.
+5. Como usuario nuevo del juego me gustaría saber curiosidades y estadísticas para adentrarme mas en el tema.
+6. Como principiante en el mundo pokémon, quiero conocer su historia y el uso de pokémon Go, para resolver dudas.
+
+## 3. Prototipos de baja fidelidad
+
+<figure>
+<img width="500px" src="src/assets/IMG_20200713_164903.jpg">
+<figcaption>Primeros prototipos</figcaption>
+</figure>
+
+<figure>
+<img width="500px" src="src/assets/ja.jpg">
+<figcaption>Primeros prototipos</figcaption>
+</figure>
+
+<figure>
+<img width="500px" src="src/assets/figma.jpg">
+<figcaption>Primeros prototipos</figcaption>
+</figure>
+
+## 4. Prototipos de alta fidelidad
+
+<figure>
+<img width="500px" src="src/assets/alta2.png">
+<figcaption>Prototipo de alta fidelidad</figcaption>
+</figure>
+
+<figure>
+<img width="500px" src="src/assets/celular.png">
+<figcaption>Prototipo de alta fidelidad para celular</figcaption>
+</figure>
+
+## 5.Test de usabilidad
+
+Mediante nuestros test con usuarios pudimos detectar problemas tanto de diseño como de funcionalidad tales como hovers muy rapidos, bordes difusos, titulos pequeños, contraste en las letras principales, mal uso del tipo de chart entre otros, los cuales logramos solucionar para llegar a un producto mas intuitivo.
+
+<figure>
+<img width="500px" src="src/assets/page.png">
+<figcaption>Prototipo de alta fidelidad para celular</figcaption>
+</figure>
+
+## 6. Objetivos de aprendizaje
 
 ### HTML y CSS
 
@@ -68,11 +114,3 @@
 * [ ] Crear prototipos para obtener feedback e iterar.
 * [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
 * [ ] Planear y ejecutar tests de usabilidad.
-
-## 4. Consideraciones generales
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-## 6. Hacker edition
-
-## 7. Consideraciones técnicas
