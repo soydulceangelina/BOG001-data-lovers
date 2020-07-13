@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokémonFan</title>
     <link rel="icon" href="assets/meowth.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media-queries.css">
-    <link rel="stylesheet" href="assets/font/flaticon.css">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../media-queries.css">
+    <link rel="stylesheet" href="../assets/font/flaticon.css">
     <link rel="stylesheet" href="canvas.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 </head>
@@ -15,11 +15,11 @@
     <header>
         <section class="header-main">
             <div class="header-logo-container">
-              <img class="header-logo" src="assets/logoheader.png" alt="PokeFan">
+                <a href="/src/index.html"><img class="header-logo" src="../assets/logoheader.png" alt="PokeFan"></a>
             </div>
             <ul class="header-menu-container">
               <li class="menu-item"><a href="/src/curiosidades.html">Curiosidades</a></li>
-              <li class="menu-item">Acerca de</li>
+              <li class="menu-item"><a href="../acerca-de/acercade.html">Acerca de</a></li>
             </ul>
           </section>
     </header>
@@ -31,8 +31,15 @@
                 <canvas id="myChart" width="400" height="400"></canvas>
             </div>
         </div>
-        <h2 class="titleII">Mira sus evoluciones!</h2>
+        <h2 class="title">Mira sus evoluciones!</h2>
         <div id="evolution" class="evolution-pokemon"></div>
+        <h2 class="title">Los pokémones mas pesados!</h2>
+        <div class="container-chart">
+            <div class="container-chart-item">
+                <canvas id="myCharts" width="400" height="400"></canvas>
+            </div>
+            <section id="cardDos" class="cards-pokemon"></section> 
+        </div>
     </main>
     <footer>
         <p>Hecho con 💙 por Sara y Dulce</p>

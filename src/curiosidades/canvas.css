@@ -9,10 +9,6 @@ main{
   text-align: center;
 }
 
-.titleII{
-  padding: 30px 0 30px 15px;
-  text-align: center;
-}
 
 .container-chart{
   width: 100%;
@@ -26,6 +22,7 @@ main{
 
 .cards-pokemon{
   width: 590px;
+  height: 450px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -84,7 +81,7 @@ main{
     flex-direction: column;
   }
   .container-chart-item{
-    margin-top: 40px;
+    margin: 40px 0 40px 0;
   }
 }
 

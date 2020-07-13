@@ -27,7 +27,7 @@ export const printCharacters = (avatars) => {
                         <h2><span class="flaticon-fengshui icons-details"></span>${character.type}</h2>
                         <h2><span class="flaticon-dimension-of-line-height icons-details"></span>${character.height}</h2>
                         <h2><span class="flaticon-dumbbell icons-details"></span>${character.weight}</h2>
-                        <h2><span class="flaticon-candy icons-details"></span>${candyCount} caramelos</h2>
+                        <h2 class="candy-count"><span class="flaticon-candy icons-details"></span>${candyCount} para evolucionar</h2>
                     </section>
                 </article>`
         }).join('');
