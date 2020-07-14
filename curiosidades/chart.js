@@ -129,6 +129,8 @@ const ourCanvas = new Chart(myChart,{
     }
 });
 
+// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line 
 const ouCanvas = new Chart(myCharts,{
     type:"bar",
     data:{
