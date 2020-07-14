@@ -48,3 +48,10 @@
         font-size: 20px;
     }
 }
+
+@media screen and (max-width:420px){
+    footer{
+        position: fixed;
+        bottom: 0;
+    }
+}
