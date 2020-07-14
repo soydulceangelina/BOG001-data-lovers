@@ -51,7 +51,7 @@ Aplicacion creada para usuarios nuevos y fans de pokémon y pokémonGO, aqui pod
 </figure>
 
 <figure>
-<img width="500px" src="src/assets/celular.png">
+<img width="200px" src="src/assets/celular.png">
 <figcaption>Prototipo de alta fidelidad para celular</figcaption>
 </figure>
 
@@ -60,8 +60,8 @@ Aplicacion creada para usuarios nuevos y fans de pokémon y pokémonGO, aqui pod
 Mediante nuestros test con usuarios pudimos detectar problemas tanto de diseño como de funcionalidad tales como hovers muy rapidos, bordes difusos, titulos pequeños, contraste en las letras principales, mal uso del tipo de chart entre otros, los cuales logramos solucionar para llegar a un producto mas intuitivo.
 
 <figure>
-<img width="500px" src="src/assets/page.png">
-<figcaption>Prototipo de alta fidelidad para celular</figcaption>
+<img width="700px" src="src/assets/page.png">
+<figcaption>Pagina Final</figcaption>
 </figure>
 
 ## 6. Objetivos de aprendizaje
