@@ -76,6 +76,11 @@ main{
   justify-content: center;
 }
 
+.highlighter{
+  font-size: 32px;
+  color: rgb(42, 117, 187);
+}
+
 @media screen and (max-width:1023px){
   .container-chart{
     flex-direction: column;
